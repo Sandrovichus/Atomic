@@ -103,7 +103,7 @@ public class Main {
     }
 
     public static boolean isInOrder(String text) {      // все символы в порядке возрастания
-        boolean oneChar = false;
+        boolean inOrder = false;
         int count = 1;
         if (!isOnlyOneChar(text)) {                    // исключаем из расчета слова, состоящие из одного символа
             for (int i = 0; i < text.length() - 1; i++) {
@@ -112,10 +112,10 @@ public class Main {
                 }
             }
             if (count == text.length()) {
-                oneChar = true;
+                inOrder = true;
             }
         }
-        return oneChar;
+        return inOrder;
     }
 
     public static String generateText(String letters, int length) {
